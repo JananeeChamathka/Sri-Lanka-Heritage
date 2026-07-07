@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing - Sri Lanka Heritage</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .testing-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 100%);
+            text-align: center;
+            padding: 120px 24px 60px;
+        }
+
+        .testing-hero h1 {
+            font-size: 3.5rem;
+            color: var(--secondary);
+            margin-bottom: 16px;
+        }
+
+        .testing-hero p {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .testing-content {
+            padding: 80px 0;
+            background: var(--light-gray);
+        }
+
+        .hirusha-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hirusha-card .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 3rem;
+            color: var(--white);
+        }
+
+        .hirusha-card h2 {
+            font-size: 1.8rem;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+        }
+
+        .hirusha-card p {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .hirusha-card .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 24px;
+        }
+
+        .hirusha-card .tags span {
+            background: var(--light);
+            color: var(--primary);
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(66, 116, 217, 0.15);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-landmark logo-icon"></i>
+                <div class="logo-text">
+                    <h1>Sri Lanka Heritage</h1>
+                    <span>Discover the Pearl of the Indian Ocean</span>
+                </div>
+            </div>
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="testing.html" class="active">Testing</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <section class="testing-hero">
+        <div>
+            <h1>Testing Page</h1>
+            <p>Hirusha ge custom testing page ekak</p>
+        </div>
+    </section>
+
+    <!-- ========== CONTENT ========== -->
+    <section class="testing-content">
+        <div class="container">
+            <div class="hirusha-card">
+                <div class="avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h2>Hirusha</h2>
+                <p>
+                    Me testing page eka Hirusha venuwen haduwa.<br>
+                    Sri Lanka Heritage website eke development process eke<br>
+                    kotasak lesa me page eka nirmanaya kara æta.
+                </p>
+                <div class="tags">
+                    <span>Testing</span>
+                    <span>Development</span>
+                    <span>Hirusha</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Sri Lanka Heritage</h3>
+                    <p>Dedicated to showcasing Sri Lanka's rich traditions, culture, and remarkable places to the world.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="testing.html">Testing</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sri Lanka Heritage. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
