@@ -12,6 +12,7 @@
     --secondary-light: #6b96e3;
     --accent: #2851a8;
     --accent-light: #6b96e3;
+    --black: #000000;
     --dark: #0d1f3c;
     --dark-light: #1a2f52;
     --light: #ffffff;
@@ -986,6 +987,17 @@ ul {
     justify-content: space-between;
     align-items: center;
     font-size: 0.85rem;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.developer-credit {
+    color: #FFFFFF;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .languages {

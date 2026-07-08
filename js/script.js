@@ -240,11 +240,13 @@ function showHeroSlide(n) {
     var slides = document.querySelectorAll('.hero-slide');
     if (!slides.length) return;
 
+    // Save the CURRENT active slide index BEFORE changing it
     var prevIndex = heroSlideIndex;
 
-    // Wrap around
+    // Set new index with wrapping
     if (n > slides.length) heroSlideIndex = 1;
-    if (n < 1) heroSlideIndex = slides.length;
+    else if (n < 1) heroSlideIndex = slides.length;
+    else heroSlideIndex = n;
 
     // Exit the previous slide (slide out to left)
     if (slides[prevIndex - 1]) {
@@ -267,8 +269,7 @@ function showHeroSlide(n) {
 function startHeroAutoPlay() {
     stopHeroAutoPlay();
     heroSlideTimer = setInterval(function() {
-        heroSlideIndex++;
-        showHeroSlide(heroSlideIndex);
+        showHeroSlide(heroSlideIndex + 1);
     }, HERO_SLIDE_INTERVAL);
 }
 
