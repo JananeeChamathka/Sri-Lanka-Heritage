@@ -209,22 +209,22 @@ img {
 }
 
 .hero-title {
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--white);
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: var(--primary-light);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-weight: 500;
 }
 
 .hero-desc {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.8;
 }
@@ -947,10 +947,14 @@ img {
     }
 
     .hero-title {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-desc {
         font-size: 1rem;
     }
 
@@ -985,7 +989,15 @@ img {
 
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 1.6rem;
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .hero-desc {
+        font-size: 0.9rem;
     }
 
     .intro-stats {
