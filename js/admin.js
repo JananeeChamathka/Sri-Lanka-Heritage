@@ -159,9 +159,7 @@ function updateStats() {
 
 // ========== PLACES TABLE ==========
 function loadPlacesTable() {
-    console.log('Loading places...');
     const tbody = document.getElementById('placesTableBody');
-    console.log('Table body:', tbody);
     tbody.innerHTML = placesData.map(place => `
         <tr>
             <td>${place.id}</td>
