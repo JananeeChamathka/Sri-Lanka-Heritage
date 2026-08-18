@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Sri Lanka Heritage</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ========== LOGIN PAGE ========== -->
+    <div class="login-page" id="loginPage">
+        <div class="login-container">
+            <div class="login-header">
+                <img src="Image/76224559-3342-4b54-b60b-fabe4f76276b.png" alt="Logo" class="login-logo">
+                <h1>Sri Lanka Heritage</h1>
+                <p>Admin Panel</p>
+            </div>
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="username">
+                        <i class="fas fa-user"></i>
+                        Username
+                    </label>
+                    <input type="text" id="username" placeholder="Enter username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">
+                        <i class="fas fa-lock"></i>
+                        Password
+                    </label>
+                    <input type="password" id="password" placeholder="Enter password" required>
+                </div>
+                <button type="submit" class="login-btn">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Login
+                </button>
+                <p class="login-hint">Default: admin / admin123</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- ========== ADMIN DASHBOARD ========== -->
+    <div class="admin-wrapper" id="adminWrapper" style="display: none;">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="Image/76224559-3342-4b54-b60b-fabe4f76276b.png" alt="Logo" class="sidebar-logo">
+                <h2>Admin Panel</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="sidebar-link active" data-section="dashboard">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="sidebar-link" data-section="places">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Tourist Places</span>
+                </a>
+                <a href="#" class="sidebar-link" data-section="festivals">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Festivals</span>
+                </a>
+                <a href="#" class="sidebar-link" data-section="food">
+                    <i class="fas fa-utensils"></i>
+                    <span>Food</span>
+                </a>
+                <a href="#" class="sidebar-link" data-section="traditions">
+                    <i class="fas fa-landmark"></i>
+                    <span>Traditions</span>
+                </a>
+                <a href="#" class="sidebar-link" data-section="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="index.html" class="sidebar-link">
+                    <i class="fas fa-eye"></i>
+                    <span>View Website</span>
+                </a>
+                <a href="#" class="sidebar-link logout-btn" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Top Bar -->
+            <div class="topbar">
+                <button class="toggle-sidebar" id="toggleSidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="topbar-right">
+                    <span class="admin-user">
+                        <i class="fas fa-user-circle"></i>
+                        Admin
+                    </span>
+                </div>
+            </div>
+
+            <!-- Dashboard Section -->
+            <div class="admin-section active" id="section-dashboard">
+                <h2 class="section-title">
+                    <i class="fas fa-tachometer-alt"></i>
+                    Dashboard
+                </h2>
+                
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon blue">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="placesCount">25</h3>
+                            <p>Tourist Places</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon green">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="festivalsCount">9</h3>
+                            <p>Festivals</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon orange">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="foodCount">6</h3>
+                            <p>Food Items</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon purple">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="traditionsCount">6</h3>
+                            <p>Traditions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-history"></i> Recent Activity</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-img-wrapper"><img src="Image/sigiriya-rock-fortress_63882.jpg" alt="Sigiriya"></div>
+                                <i class="fas fa-plus-circle text-blue"></i>
+                                <div class="activity-info">
+                                    <p>New tourist place added: <strong>Sigiriya</strong></p>
+                                    <span class="activity-time">2 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-img-wrapper"><img src="Image/temple-204803_640.webp" alt="Esala Perahera"></div>
+                                <i class="fas fa-edit text-green"></i>
+                                <div class="activity-info">
+                                    <p>Festival updated: <strong>Esala Perahera</strong></p>
+                                    <span class="activity-time">5 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-img-wrapper"><img src="Image/01.jpg" alt="Old Recipe"></div>
+                                <i class="fas fa-trash text-red"></i>
+                                <div class="activity-info">
+                                    <p>Food item removed: <strong>Old Recipe</strong></p>
+                                    <span class="activity-time">1 day ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tourist Places Section -->
+            <div class="admin-section" id="section-places">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Tourist Places
+                    </h2>
+                    <button class="btn btn-primary" id="addPlaceBtn">
+                        <i class="fas fa-plus"></i> Add New Place
+                    </button>
+                </div>
+                
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Province</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="placesTableBody">
+                            <!-- Data loaded from JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Festivals Section -->
+            <div class="admin-section" id="section-festivals">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-calendar-alt"></i>
+                        Festivals
+                    </h2>
+                    <button class="btn btn-primary" id="addFestivalBtn">
+                        <i class="fas fa-plus"></i> Add New Festival
+                    </button>
+                </div>
+                
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Month</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="festivalsTableBody">
+                            <!-- Data loaded from JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Food Section -->
+            <div class="admin-section" id="section-food">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-utensils"></i>
+                        Sri Lankan Food
+                    </h2>
+                    <button class="btn btn-primary" id="addFoodBtn">
+                        <i class="fas fa-plus"></i> Add New Food
+                    </button>
+                </div>
+                
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="foodTableBody">
+                            <!-- Data loaded from JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Traditions Section -->
+            <div class="admin-section" id="section-traditions">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-landmark"></i>
+                        Traditions & Culture
+                    </h2>
+                    <button class="btn btn-primary" id="addTraditionBtn">
+                        <i class="fas fa-plus"></i> Add New Tradition
+                    </button>
+                </div>
+                
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Icon</th>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="traditionsTableBody">
+                            <!-- Data loaded from JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Settings Section -->
+            <div class="admin-section" id="section-settings">
+                <h2 class="section-title">
+                    <i class="fas fa-cog"></i>
+                    Settings
+                </h2>
+                
+                <div class="settings-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Change Password</h3>
+                        </div>
+                        <div class="card-body">
+                            <form id="passwordForm">
+                                <div class="form-group">
+                                    <label>Current Password</label>
+                                    <input type="password" id="currentPassword" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>New Password</label>
+                                    <input type="password" id="newPassword" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Confirm New Password</label>
+                                    <input type="password" id="confirmPassword" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-save"></i> Save Changes
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Site Information</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="info-item">
+                                <label>Site Name</label>
+                                <input type="text" value="Sri Lanka Heritage" id="siteName">
+                            </div>
+                            <div class="info-item">
+                                <label>Contact Email</label>
+                                <input type="email" value="info@srilankaheritage.lk" id="contactEmail">
+                            </div>
+                            <button class="btn btn-primary" id="saveSettings">
+                                <i class="fas fa-save"></i> Save Settings
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ========== MODAL ========== -->
+    <div class="modal" id="modal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Add New Item</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic form content -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="modalCancel">Cancel</button>
+                <button class="btn btn-primary" id="modalSave">
+                    <i class="fas fa-save"></i> Save
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Success!</span>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
